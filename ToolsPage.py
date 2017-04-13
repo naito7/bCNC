@@ -361,12 +361,11 @@ class _Base:
 						str(self.values.get(key,d)))
 		else:
 			for n, t, d, l in self.variables:
-                try:
-                    Utils.setStr(self.name, n, str(self.values.get(n,d)))
-                except:
-                    print "something wrong to save. name=%s, value=%s" % (self.name, repr(self.values.get(n,d)))
-                    raise
-                    
+				try:
+					Utils.setStr(self.name, n, str(self.values.get(n,d)))
+				except:
+					print "something wrong to save. name=%s, value=%s" % (self.name, repr(self.values.get(n,d)))
+					raise
 
 	# ----------------------------------------------------------------------
 	def fromMm(self, name, default=0.0):
